@@ -23,7 +23,7 @@ A responsive cryptocurrency converter built using **HTML, CSS and JavaScript**. 
 
 - HTML5
 - CSS3
-- JavaScript (ES6)
+- JavaScript 
 - Chart.js
 - CoinGecko Public API
 - Local Storage
@@ -40,7 +40,9 @@ https://docs.coingecko.com/
 
 Example Endpoint:
 
-https://api.coingecko.com/api/v3/simple/price
+Base URL:
+
+https://api.coingecko.com/api/v3/
 
 ---
 
@@ -123,6 +125,7 @@ jsbasic2026
 
 - Responsive Login Page
 - Secure JSON Authentication
+- Live API Integration
 - Live Cryptocurrency Conversion
 - Historical Price Visualization
 - Favorite Currency Pair Storage
@@ -135,7 +138,10 @@ jsbasic2026
 
 **Tanvi**
 
-B.Tech CSE
+Tanvi
+
+B.Tech CSE( AI & FT)
+2410998601 - 5D
 
 ---
 

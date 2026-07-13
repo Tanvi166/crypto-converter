@@ -1,23 +1,17 @@
-// ===============================
-// Redirect if already logged in
-// ===============================
+
 
 if (localStorage.getItem("loggedInUser")) {
     window.location.href = "dashboard.html";
 }
 
-// ===============================
-// Login Form
-// ===============================
+
 
 const loginForm = document.getElementById("loginForm");
 const message = document.getElementById("message");
 
 loginForm.addEventListener("submit", loginUser);
 
-// ===============================
-// Login Function
-// ===============================
+
 
 async function loginUser(event) {
 
@@ -33,7 +27,7 @@ async function loginUser(event) {
         .value
         .trim();
 
-    // Validation
+   
 
     if (username === "" || password === "") {
 
@@ -90,9 +84,7 @@ async function loginUser(event) {
 
 }
 
-// ===============================
-// Message Function
-// ===============================
+
 
 function showMessage(text, color) {
 

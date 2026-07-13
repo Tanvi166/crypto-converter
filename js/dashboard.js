@@ -1,28 +1,14 @@
-// ========================================
-// Crypto Converter Dashboard
-// Author: Tanvi
-// ========================================
-
-// -------------------------------
-// Check Login
-// -------------------------------
-
 const loggedInUser = localStorage.getItem("loggedInUser");
 
 if (!loggedInUser) {
     window.location.href = "index.html";
 }
 
-// -------------------------------
-// Welcome Message
-// -------------------------------
 
 document.getElementById("welcomeUser").innerHTML =
     "👋 Welcome, " + loggedInUser;
 
-// -------------------------------
-// DOM Elements
-// -------------------------------
+
 
 const coin = document.getElementById("coin");
 const currency = document.getElementById("currency");
@@ -40,21 +26,15 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 let chart;
 
-// -------------------------------
-// Convert Button
-// -------------------------------
+
 
 convertBtn.addEventListener("click", convertCrypto);
 
-// -------------------------------
-// Favorite Button
-// -------------------------------
+
 
 favoriteBtn.addEventListener("click", saveFavorite);
 
-// -------------------------------
-// Logout
-// -------------------------------
+
 
 logoutBtn.addEventListener("click", () => {
 
@@ -64,9 +44,7 @@ logoutBtn.addEventListener("click", () => {
 
 });
 
-// -------------------------------
-// Convert Crypto
-// -------------------------------
+
 
 async function convertCrypto() {
 
@@ -114,9 +92,7 @@ async function convertCrypto() {
 
 }
 
-// -------------------------------
-// Historical Chart
-// -------------------------------
+
 
 async function drawChart(){
 
@@ -201,9 +177,7 @@ async function drawChart(){
 
 }
 
-// -------------------------------
-// Save Favorite
-// -------------------------------
+
 
 function saveFavorite(){
 
@@ -227,9 +201,7 @@ function saveFavorite(){
 
 }
 
-// -------------------------------
-// Load Favorites
-// -------------------------------
+
 
 function loadFavorites(){
 
@@ -250,9 +222,7 @@ function loadFavorites(){
 
 }
 
-// -------------------------------
-// Initial Load
-// -------------------------------
+
 
 loadFavorites();
 

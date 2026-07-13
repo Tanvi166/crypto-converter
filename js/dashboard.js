@@ -70,7 +70,7 @@ logoutBtn.addEventListener("click", () => {
 
 async function convertCrypto() {
 
-    loading.innerHTML = "Loading...";
+    loading.innerHTML = "Fetching latest prices...";
 
     result.innerHTML = "";
 

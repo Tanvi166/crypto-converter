@@ -1,67 +1,144 @@
 # 🚀 Crypto & Currency Converter
 
-A responsive Crypto Currency Converter developed using **HTML, CSS and JavaScript**.
+A responsive cryptocurrency converter built using **HTML, CSS and JavaScript**. This project allows users to securely log in using a local JSON file, view live cryptocurrency prices, convert currencies, visualize historical price trends, and save their favorite currency pairs.
 
 ---
 
-## Features
+## 📌 Features
 
-- Secure Login using users.json
-- Session Management using Local Storage
-- Live Crypto Prices
-- Currency Conversion
-- Historical 7-Day Price Graph
-- Favorite Currency Pairs
-- Responsive UI
-- Logout
-- Error Handling
+- 🔐 JSON-based Login Authentication
+- 💾 Session Management using Local Storage
+- 💰 Live Cryptocurrency Price Conversion
+- 🌍 Multiple Currency Support (USD, INR, EUR, GBP, etc.)
+- 📈 7-Day Historical Price Chart using Chart.js
+- ⭐ Save Favorite Currency Pairs
+- 🚪 Logout Functionality
+- 📱 Fully Responsive User Interface
+- ⚠️ Error Handling for Invalid Login and API Requests
+- 🎨 Clean and Modern UI Design
 
 ---
 
-## Technologies Used
+## 🛠 Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript (ES6)
-- CoinGecko API
 - Chart.js
+- CoinGecko Public API
+- Local Storage
 
 ---
 
-## API Used
+## 🌐 API Used
 
-CoinGecko Public API
+**CoinGecko Public API**
 
-https://www.coingecko.com/
+Documentation:
 
----
+https://docs.coingecko.com/
 
-## Folder Structure
+Example Endpoint:
 
-Project
-
-assets/
-
-html/
-
-js/
-
-style.css
-
-users.json
-
-README.md
+https://api.coingecko.com/api/v3/simple/price
 
 ---
 
-## Demo Credentials
+## 📂 Folder Structure
 
-Username : admin
-
-Password : password123
+```text
+crypto-converter/
+│
+├── assets/
+│   ├── bg.jpg
+│   └── logo.avif
+│
+├── html/
+│   ├── index.html
+│   └── dashboard.html
+│
+├── js/
+│   ├── login.js
+│   └── dashboard.js
+│
+├── style.css
+├── users.json
+├── README.md
+└── .gitignore
+```
 
 ---
 
-## Developed By
+## 🚀 How to Run
 
-Tanvi
+1. Clone the repository
+
+```
+git clone https://github.com/Tanvi166/crypto-converter.git
+```
+
+2. Open the project in VS Code.
+
+3. Install the **Live Server** extension.
+
+4. Right-click on **index.html** and select **Open with Live Server**.
+
+5. Login using the demo credentials below.
+
+---
+
+## 🔑 Demo Credentials
+
+### Admin
+
+Username
+
+```
+admin
+```
+
+Password
+
+```
+password123
+```
+
+### Student
+
+Username
+
+```
+student
+```
+
+Password
+
+```
+jsbasic2026
+```
+
+---
+
+## 📸 Project Highlights
+
+- Responsive Login Page
+- Secure JSON Authentication
+- Live Cryptocurrency Conversion
+- Historical Price Visualization
+- Favorite Currency Pair Storage
+- Responsive Dashboard
+- Local Storage Session Management
+
+---
+
+## 👩‍💻 Developer
+
+**Tanvi**
+
+B.Tech CSE
+
+---
+
+## 📄 License
+
+This project was developed for academic learning purposes.

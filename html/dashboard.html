@@ -1,174 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Crypto Dashboard</title>
-
     <link rel="stylesheet" href="../style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
-
 <body class="dashboard">
-
-
     <header>
-
         <h2>🚀 Crypto & Currency Converter</h2>
-
         <div>
-
             <span id="welcomeUser"></span>
-
             <button class="logout" id="logoutBtn">
                 Logout
             </button>
-
         </div>
-
     </header>
-
-
     <div class="container">
-
-
         <div class="card">
-
             <h3>Live Crypto Converter</h3>
-
             <div class="row">
-
                 <div class="col">
-
                     <label>Crypto Coin</label>
-
                     <select id="coin">
-
                         <option value="bitcoin">Bitcoin</option>
-
                         <option value="ethereum">Ethereum</option>
-
                         <option value="dogecoin">Dogecoin</option>
-
                         <option value="solana">Solana</option>
-
                         <option value="ripple">Ripple</option>
-
                         <option value="litecoin">Litecoin</option>
-
                     </select>
-
                 </div>
-
                 <div class="col">
-
                     <label>Currency</label>
-
                     <select id="currency">
-
                         <option value="usd">USD</option>
-
                         <option value="inr">INR</option>
-
                         <option value="eur">EUR</option>
-
                         <option value="gbp">GBP</option>
-
                         <option value="jpy">JPY</option>
-
                     </select>
-
                 </div>
-
             </div>
-
             <br>
-
             <div class="row">
-
                 <div class="col">
-
                     <label>Amount</label>
-
                     <input
                         type="number"
                         id="amount"
                         placeholder="Enter Amount"
                         min="1"
                         value="1">
-
                 </div>
-
             </div>
-
             <button class="convert-btn" id="convertBtn">
-
                 Convert
-
             </button>
-
             <button class="favorite-btn" id="favoriteBtn">
-
                 ⭐ Save Favorite Pair
-
             </button>
-
             <div class="loading" id="loading"></div>
             <div id="loading" class="loading"></div>
             <div class="result" id="result">
-
                 Select values and click Convert
-
             </div>
-
-        </div>
-
-      
-
+        </div>    
         <div class="card">
-
             <h3>⭐ Favorite Currency Pairs</h3>
-
             <ul class="favorite-list" id="favoriteList">
-
             </ul>
-
         </div>
-
-
         <div class="card">
-
             <h3>📈 7-Day Historical Price</h3>
-
             <canvas id="priceChart"></canvas>
-
         </div>
-
     </div>
-
     <footer>
-
     <p>Crypto & Currency Converter</p>
-
     <p>
     Powered by CoinGecko API | Chart.js | HTML | CSS | JavaScript
     </p>
-
     </footer>
-
     <script src="../js/dashboard.js"></script>
-
 </body>
-
 </html>

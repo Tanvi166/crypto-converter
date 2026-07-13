@@ -1,86 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Crypto Converter | Login</title>
-
     <link rel="stylesheet" href="../style.css">
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body class="login-body">
-
     <div class="overlay"></div>
-
     <div class="login-container">
-
         <img src="../assets/logo.avif" class="logo" alt="Logo">
-
-        <h1>Crypto Converter</h1>
-
+        <h1>Crypto Exchange</h1>
         <p class="subtitle">
-            Login to continue
+            Secure Access to Your Dashboard
         </p>
-
+        
         <form id="loginForm">
-
             <div class="input-group">
-
                 <label>Username</label>
-
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="Enter Username"
-                    required>
-
+                <input type="text" id="username" placeholder="Enter Username" required>
             </div>
-
             <div class="input-group">
-
                 <label>Password</label>
-
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Enter Password"
-                    required>
-
+                <input type="password" id="password" placeholder="Enter Password" required>
             </div>
-
             <button type="submit" class="login-btn">
-
                 Login
-
             </button>
-
             <p id="message"></p>
-
         </form>
-
+        <h3 class="welcome-text">
+           Welcome Back 👋
+        </h3>
         <div class="demo">
-
             <h4>Demo Credentials</h4>
-
             <p><b>admin</b> / password123</p>
-
             <p><b>student</b> / jsbasic2026</p>
-
         </div>
-
     </div>
-
     <script src="../js/login.js"></script>
-
 </body>
-
 </html>

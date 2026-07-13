@@ -1,95 +1,47 @@
-
-
 if (localStorage.getItem("loggedInUser")) {
     window.location.href = "dashboard.html";
 }
-
-
-
-const loginForm = document.getElementById("loginForm");
-const message = document.getElementById("message");
-
+var loginForm = document.getElementById("loginForm");
+var message = document.getElementById("message");
 loginForm.addEventListener("submit", loginUser);
-
-
-
-async function loginUser(event) {
-
+function loginUser(event) {
     event.preventDefault();
-
-    const username = document
-        .getElementById("username")
-        .value
-        .trim();
-
-    const password = document
-        .getElementById("password")
-        .value
-        .trim();
-
-   
-
-    if (username === "" || password === "") {
-
+    var username = document.getElementById("username").value.trim();
+    var password = document.getElementById("password").value.trim();
+    if (username == "" || password == "") {
         showMessage("Please fill all fields.", "orange");
-
         return;
-
     }
-
-    try {
-
-        const response = await fetch("../users.json");
-
+    fetch("../users.json")
+    .then(function(response) {
         if (!response.ok) {
             throw new Error("Unable to load users.");
         }
-
-        const users = await response.json();
-
-        const validUser = users.find(user =>
-            user.username === username &&
-            user.password === password
-        );
-
-        if (validUser) {
-
-            localStorage.setItem("loggedInUser", username);
-
-            showMessage("Login Successful!", "#00d26a");
-
-            setTimeout(() => {
-
-                window.location.href = "dashboard.html";
-
-            }, 1000);
-
+        return response.json();
+    })
+    .then(function(users) {
+        var found = false;
+        for (var i = 0; i < users.length; i++) {
+            if (users[i].username == username && users[i].password == password) {
+                found = true;
+                localStorage.setItem("loggedInUser", username);
+                showMessage("Login Successful!", "#00d26a");
+                setTimeout(function() {
+                    window.location.href = "dashboard.html";
+                }, 1000);
+                break;
+            }
         }
-
-        else {
-
+        if (found == false) {
             showMessage("Invalid Username or Password!", "#ff4d4d");
-
         }
-
-    }
-
-    catch (error) {
-
-        console.error(error);
-
+    })
+    .catch(function(error) {
+        console.log(error);
         showMessage("Something went wrong!", "#ff4d4d");
-
-    }
-
+    });
 }
-
-
-
 function showMessage(text, color) {
-
     message.innerHTML = text;
-
     message.style.color = color;
-
 }

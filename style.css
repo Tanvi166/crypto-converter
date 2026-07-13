@@ -1,0 +1,486 @@
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   LOGIN PAGE
+=========================== */
+
+.login-body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:url("assets/bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.login-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:400px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+}
+
+.logo{
+
+    width:90px;
+
+    margin-bottom:15px;
+
+}
+
+.login-container h1{
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+.subtitle{
+
+    opacity:.85;
+
+    margin-bottom:30px;
+
+}
+
+.input-group{
+
+    text-align:left;
+
+    margin-bottom:18px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-weight:500;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.login-btn{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#00b894;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.login-btn:hover{
+
+    background:#009e7d;
+
+}
+
+#message{
+
+    margin-top:15px;
+
+    font-weight:600;
+
+    color:#ffd86b;
+
+}
+
+.demo{
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.demo h4{
+
+    margin-bottom:8px;
+
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard{
+
+    min-height:100vh;
+
+    background:#eef2f8;
+
+}
+
+header{
+
+    background:#1f2937;
+
+    color:white;
+
+    padding:18px 50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+header h2{
+
+    font-size:26px;
+
+}
+
+.logout{
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+}
+
+.logout:hover{
+
+    background:#dc2626;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+
+}
+
+.card h3{
+
+    margin-bottom:20px;
+
+}
+
+.row{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.col{
+
+    flex:1;
+
+}
+
+select,input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+.convert-btn{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.convert-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.result{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#2563eb;
+
+}
+
+.loading{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-top:15px;
+
+}
+
+canvas{
+
+    margin-top:30px;
+
+    background:white;
+
+    border-radius:10px;
+
+}
+
+/* ===========================
+   FAVORITES
+=========================== */
+
+.favorite-btn{
+
+    margin-top:15px;
+
+    padding:12px;
+
+    background:#f59e0b;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+}
+
+.favorite-btn:hover{
+
+    background:#d97706;
+
+}
+
+.favorite-list{
+
+    margin-top:15px;
+
+}
+
+.favorite-list li{
+
+    list-style:none;
+
+    background:#f3f4f6;
+
+    padding:10px;
+
+    margin-bottom:8px;
+
+    border-radius:8px;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:50px;
+
+    padding:20px;
+
+    text-align:center;
+
+    color:#777;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.login-container{
+
+    width:92%;
+
+    padding:25px;
+
+}
+
+header{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    text-align:center;
+
+}
+
+.row{
+
+    flex-direction:column;
+
+}
+
+.container{
+
+    width:95%;
+
+}
+
+.card{
+
+    padding:20px;
+
+}
+
+.result{
+
+    font-size:20px;
+
+}
+
+}
